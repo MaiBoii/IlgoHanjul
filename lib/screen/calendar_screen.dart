@@ -77,7 +77,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
                       child: HowMuchRead(
                         startPage: book.startPage,
                         endPage: book.endPage,
+                        totalPage: book.totalPage,
                         book: book.title,
+                        author: book.author,
+                        publish: book.publish,
                       ),
                     ),
                   );

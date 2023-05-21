@@ -23,7 +23,10 @@ class _ReadInputSheetState extends State<ReadInputSheet> {
   //자료형 뒤에 ?를 넣으면 null허용 변수라는 뜻임
   int? startPage;
   int? endPage;
+  int? totalPage;
   String? title;
+  String? author;
+  String? publish;
 
   @override 
   Widget build(BuildContext context){
@@ -42,10 +45,31 @@ class _ReadInputSheetState extends State<ReadInputSheet> {
             SizedBox(height: 8.0,),
             Expanded(
             child: CustomTextField(
-            label: '(카카오 API로 책제목/작가명/출판사명/총 페이지수 갖고 오는 위젯)',
+            // label: '(카카오 API로 책제목/작가명/출판사명/총 페이지수 갖고 오는 위젯)',
+            label: '제목',
             isPage: false,
             onSaved: (String? val) {
               title = val;
+            },
+            validator: titleValidator,
+          ),
+          ),
+          Expanded(
+            child: CustomTextField(
+            label: '작가명',
+            isPage: false,
+            onSaved: (String? val) {
+              author = val;
+            },
+            validator: titleValidator,
+          ),
+          ),
+          Expanded(
+            child: CustomTextField(
+            label: '출판사',
+            isPage: false,
+            onSaved: (String? val) {
+              publish = val;
             },
             validator: titleValidator,
           ),
@@ -63,7 +87,7 @@ class _ReadInputSheetState extends State<ReadInputSheet> {
                         validator: pageValidator,
                       ),
                     ),
-                    const SizedBox(width: 16.0,),
+                    const SizedBox(width: 10.0,),
                     Expanded(
                       child: CustomTextField(
                         label: '여기까지!',
@@ -74,9 +98,20 @@ class _ReadInputSheetState extends State<ReadInputSheet> {
                         validator: pageValidator,
                       ),
                     ),
+                    const SizedBox(width: 10.0,),
+                    Expanded(
+                      child: CustomTextField(
+                        label: '총 몇 페이지?',
+                        isPage: true,
+                        onSaved: (String? val) {
+                          totalPage = int.parse(val!);
+                        },
+                        validator: pageValidator,
+                      ),
+                    ),
                   ],
                 ),
-        SizedBox(height: 200.0),
+        SizedBox(height: 130.0),
         SizedBox(
           width: double.infinity,
           child: ElevatedButton(

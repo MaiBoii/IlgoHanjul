@@ -4,12 +4,18 @@ import 'package:flutter/material.dart';
 class HowMuchRead extends StatelessWidget{
   final int startPage;
   final int endPage;
+  final int totalPage;
   final String book;
+  final String author;
+  final String publish;
 
   const HowMuchRead({
     required this.startPage,
     required this.endPage,
+    required this.totalPage,
     required this.book,
+    required this.author,
+    required this.publish,
     Key? key,
   }): super(key: key);
 
@@ -31,12 +37,15 @@ class HowMuchRead extends StatelessWidget{
             children: [
               SizedBox(width: 30.0),
               _Book(
-                book: book
+                book: book,
+                author: author,
+                publish: publish,
               ),
               SizedBox(width: 16.0),
               _Page(
                 startPage: startPage,
                 endPage: endPage,
+                totalPage: totalPage,
               ),
             ],
           ),
@@ -46,14 +55,15 @@ class HowMuchRead extends StatelessWidget{
   }
 }
 
-
 class _Page extends StatelessWidget {
   final int startPage;
   final int endPage;
+  final int totalPage;
 
   const _Page({
     required this.startPage,
     required this.endPage,
+    required this.totalPage,
     Key? key
   }) : super(key: key);
 
@@ -77,6 +87,11 @@ class _Page extends StatelessWidget {
           '${endPage}p',
           style: textStyle,
         ),
+        SizedBox(width: 10.0,),
+        Text(
+          '${totalPage}p',
+          style: textStyle,
+        ),
       ],
     );
   }
@@ -84,9 +99,14 @@ class _Page extends StatelessWidget {
 
 class _Book extends StatelessWidget {
   final String book;
+  final String author;
+  final String publish;
 
   const _Book({
     required this.book,
+    required this.author,
+    required this.publish,
+
     Key? key,
   }) : super(key: key);
 
@@ -98,7 +118,7 @@ class _Book extends StatelessWidget {
         style: TextStyle(
           fontWeight: FontWeight.w600,
           color: PRIMARY_COLOR,
-          fontSize: 18.0
+          fontSize: 30.0
         ),
       )
     );
