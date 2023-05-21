@@ -1,0 +1,45 @@
+name: ilgohanjul
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  table_calendar:
+  intl: 
+  drift:
+  sqlite3_flutter_libs:
+  path_provider:
+  path:
+  dio:
+  get_it:
+  provider:
+  uuid:
+  http:
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  drift_dev: 
+  build_runner:
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - asset/imgs/
+    - asset/fonts/
+
+  fonts:
+    - family: bukuku
+      fonts:
+      - asset: asset/fonts/bukuku_light.ttf
+      
