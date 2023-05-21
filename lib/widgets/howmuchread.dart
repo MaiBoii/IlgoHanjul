@@ -35,7 +35,7 @@ class HowMuchRead extends StatelessWidget{
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SizedBox(width: 30.0),
+              SizedBox(width: 10.0),
               _Book(
                 book: book,
                 author: author,
@@ -72,7 +72,7 @@ class _Page extends StatelessWidget {
     final textStyle = TextStyle(
       fontWeight: FontWeight.w600,
       color: PRIMARY_COLOR,
-      fontSize: 14.0
+      fontSize: 13.0
     );
 
     return Row(
@@ -112,15 +112,38 @@ class _Book extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
-    return Expanded(
-      child: Text(
+    final titleStyle = TextStyle(
+      fontWeight: FontWeight.w600,
+      color: PRIMARY_COLOR,
+      fontSize: 20.0
+    );
+    final etcStyle = TextStyle(
+      fontWeight: FontWeight.w600,
+      color: DARK_GREY_COLOR,
+      fontSize: 10.0
+    );
+
+    return Row(
+      children: [
+        Text(
         book,
-        style: TextStyle(
-          fontWeight: FontWeight.w600,
-          color: PRIMARY_COLOR,
-          fontSize: 30.0
-        ),
+        style: titleStyle
+      ),
+      SizedBox(width: 10.0),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Text(
+            author,
+            style: etcStyle,
+          ),
+          Text(
+            publish,
+            style: etcStyle,
+          )
+        ],
       )
+      ]
     );
   }
 }

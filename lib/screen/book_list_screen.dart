@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ilgohanjul/const/colors.dart';
 
 class BookListScreen extends StatelessWidget {
   const BookListScreen({Key? key}) : super(key: key);
@@ -6,7 +7,18 @@ class BookListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      body: Text('Book List Screen'),
+      backgroundColor: LIGHT_GREY_COLOR,
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          '당신의 기록들',
+          style: TextStyle(
+            color: LIGHT_GREY_COLOR
+          ),
+        ),
+        backgroundColor: PRIMARY_COLOR,
+      ),
+      
     );
   }
 }

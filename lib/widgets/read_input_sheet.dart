@@ -142,10 +142,13 @@ void onSavePressed() async {
 
       await GetIt.I<LocalDatabase>().createBook(
         BooksCompanion(
+          title: Value(title!),
+          author: Value(author!),
+          publish: Value(publish!),
+          date: Value(widget.selectedDate),
           startPage: Value(startPage!),
           endPage: Value(endPage!),
-          title: Value(title!),
-          date: Value(widget.selectedDate)
+          totalPage: Value(totalPage!),
         )
       );
 
@@ -176,7 +179,7 @@ void onSavePressed() async {
   //제목값 검증
   String? titleValidator(String? val) {
     if(val == null || val.length == 0){
-      return '제목을 입력해주셔야합니다!';
+      return '내용을 입력해주셔야합니다!';
     }
   } 
 }
