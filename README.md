@@ -1,3 +1,3 @@
-# ilgohanjul
+# 읽고한줄(Ilgohanjul)
 
-A new Flutter project.
+- 개발자가 쓰려고 만든 독서 습관 유지용 어플
