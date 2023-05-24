@@ -18,11 +18,7 @@ class BookListScreen extends StatelessWidget {
         backgroundColor: LIGHT_GREY_COLOR,
         elevation: 0.0,
         title: 
-          ),
-      body: SafeArea(
-        child: Column(
-          children:[
-            TextFormField(
+        TextFormField(
               controller: searchTextEditingController,
               decoration: InputDecoration(
                 enabledBorder: UnderlineInputBorder(
@@ -42,7 +38,29 @@ class BookListScreen extends StatelessWidget {
                   color: PRIMARY_COLOR
               ),
             ),
-            SingleChildScrollView(
+          ),
+      body: SingleChildScrollView(
+            // TextFormField(
+            //   controller: searchTextEditingController,
+            //   decoration: InputDecoration(
+            //     enabledBorder: UnderlineInputBorder(
+            //       borderSide: BorderSide(color: Colors.black),
+            //       ),
+            //     focusedBorder: UnderlineInputBorder(
+            //       borderSide: BorderSide(color: Colors.black),
+            //     ),
+            //     filled: false,
+            //     // fillColor: PRIMARY_COLOR,
+            //     prefixIcon: Icon(Icons.search, color: Colors.black, size: 30),
+            //     suffixIcon: IconButton(icon: Icon(Icons.clear, color: Colors.black,), 
+            //     onPressed: emptyTheTextFormField)
+            //     ),
+            //     style: TextStyle(
+            //       fontSize: 20,
+            //       color: PRIMARY_COLOR
+            //   ),
+            // ),
+            
           scrollDirection: Axis.vertical,
           child: Column(
           children:[
@@ -81,12 +99,15 @@ class BookListScreen extends StatelessWidget {
               author:"표도로 도스토옙스키",
               publish:"민음사",
             ),
+            BookCard(
+              isbnl: "_",
+              totalPage: 464,
+              title: '죄와 벌',
+              author:"표도로 도스토옙스키",
+              publish:"민음사",
+            ),
           ]
       )
-    )
-
-      ]
-    )
     )
     );
   }
