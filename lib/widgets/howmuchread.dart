@@ -122,7 +122,6 @@ class _Book extends StatelessWidget {
       color: DARK_GREY_COLOR,
       fontSize: 10.0
     );
-
     return Row(
       children: [
         Text(

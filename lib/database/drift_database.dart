@@ -32,6 +32,7 @@ class LocalDatabase extends _$LocalDatabase {
   int get schemaVersion => 1; 
 }
 
+//drift로 sqlite 가져올 떄는 LazyDatabase 필수
 LazyDatabase _openConnection(){
   return LazyDatabase(() async {
 

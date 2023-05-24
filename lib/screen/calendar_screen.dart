@@ -48,7 +48,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               selectedDate: selectedDate,
               onDaySelected: onDaySelected,
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             TodayBanner(
               selectedDate: selectedDate, 
               count: 0),

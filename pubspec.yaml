@@ -42,4 +42,6 @@ flutter:
     - family: bukuku
       fonts:
       - asset: asset/fonts/bukuku_light.ttf
+      - asset: asset/fonts/bukuku_bold.ttf
+        weight: 700
       
