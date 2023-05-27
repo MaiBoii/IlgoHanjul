@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ilgohanjul/const/colors.dart';
 import 'package:ilgohanjul/widgets/book_card.dart';
+import 'package:ilgohanjul/widgets/bottom_navigation_bar.dart';
 
 TextEditingController searchTextEditingController = TextEditingController();
 
@@ -108,7 +109,7 @@ class BookListScreen extends StatelessWidget {
             ),
           ]
       )
-    )
+    ),
     );
   }
 }

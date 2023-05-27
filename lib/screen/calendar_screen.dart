@@ -6,6 +6,7 @@ import 'package:ilgohanjul/widgets/howmuchread.dart';
 import 'package:ilgohanjul/widgets/today_banner.dart';
 import 'package:ilgohanjul/widgets/read_input_sheet.dart';
 import 'package:ilgohanjul/const/colors.dart';
+import 'package:ilgohanjul/widgets/bottom_navigation_bar.dart';
 
 class CalendarScreen extends StatefulWidget {
   const CalendarScreen({Key? key}) : super(key: key);
