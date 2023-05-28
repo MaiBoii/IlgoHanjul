@@ -22,6 +22,7 @@ dependencies:
   provider:
   uuid:
   http:
+  syncfusion_flutter_charts:
 
 
 dev_dependencies:

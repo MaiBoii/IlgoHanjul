@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ilgohanjul/const/colors.dart';
 import 'package:ilgohanjul/screen/calendar_screen.dart';
 import 'package:ilgohanjul/screen/book_list_screen.dart';
+import 'package:ilgohanjul/screen/chart_screen.dart';
 import 'package:ilgohanjul/screen/signin.dart';
 import 'package:ilgohanjul/screen/test.dart';
 class HomeScreen extends StatefulWidget {
@@ -31,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List pages = [
-    SignInScreen(),
+    ChartScreen(),
     CalendarScreen(),
     BookListScreen(),
     BookCard(),
